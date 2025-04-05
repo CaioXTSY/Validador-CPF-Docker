@@ -1,0 +1,12 @@
+version: '3'
+services:
+  server:
+    build: ./server
+    ports:
+      - "${HOST_PORT}:${PORT}"
+    env_file:
+      - .env
+  client:
+    build: ./client
+    depends_on:
+      - server
