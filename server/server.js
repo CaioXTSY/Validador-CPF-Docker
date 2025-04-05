@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
-const port = 3000; // Porta fixa para o container
+const port = 3000; // Porta interna do container
 
 app.use(express.json());
+app.use(express.static('public')); // Serve os arquivos da pasta public (incluindo index.html)
 
 // Função para validar CPF
 function isValidCPF(cpf) {
