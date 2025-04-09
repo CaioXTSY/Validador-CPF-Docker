@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-// Exemplo de CPF para teste (altere conforme necessário)
+// exemplo de CPF para teste
 const cpf = "12345678909";
 
 async function validateCPF() {
